@@ -50,7 +50,7 @@ namespace SellSix.Model
         {
             Open();
             var cmd = new SQLiteCommand(query, _connection);
-            return cmd.ExecuteReader(); // lembre-se de chamar Close depois de ler os dados
+            return cmd.ExecuteReader(); 
         }
     }
 }
