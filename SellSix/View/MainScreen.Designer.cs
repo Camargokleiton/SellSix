@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
-            cadastroDeProdutoToolStripMenuItem = new ToolStripMenuItem();
             cadastroDeUsuárioToolStripMenuItem = new ToolStripMenuItem();
             panelScreens = new Panel();
             menuStrip1.SuspendLayout();
@@ -41,51 +41,46 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 2, 0, 2);
-            menuStrip1.Size = new Size(1010, 24);
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(1010, 25);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // cadastroToolStripMenuItem
             // 
-            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroDeProdutoToolStripMenuItem, cadastroDeUsuárioToolStripMenuItem });
+            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroDeUsuárioToolStripMenuItem });
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(66, 20);
+            cadastroToolStripMenuItem.Size = new Size(66, 19);
             cadastroToolStripMenuItem.Text = "Cadastro";
-            // 
-            // cadastroDeProdutoToolStripMenuItem
-            // 
-            cadastroDeProdutoToolStripMenuItem.Name = "cadastroDeProdutoToolStripMenuItem";
-            cadastroDeProdutoToolStripMenuItem.Size = new Size(183, 22);
-            cadastroDeProdutoToolStripMenuItem.Text = "Cadastro de Produto";
             // 
             // cadastroDeUsuárioToolStripMenuItem
             // 
             cadastroDeUsuárioToolStripMenuItem.Name = "cadastroDeUsuárioToolStripMenuItem";
-            cadastroDeUsuárioToolStripMenuItem.Size = new Size(183, 22);
+            cadastroDeUsuárioToolStripMenuItem.Size = new Size(180, 22);
             cadastroDeUsuárioToolStripMenuItem.Text = "Cadastro de Usuário";
+            cadastroDeUsuárioToolStripMenuItem.Click += cadastroDeUsuárioToolStripMenuItem_Click;
             // 
             // panelScreens
             // 
             panelScreens.Dock = DockStyle.Fill;
-            panelScreens.Location = new Point(0, 24);
+            panelScreens.Location = new Point(0, 25);
             panelScreens.Name = "panelScreens";
-            panelScreens.Size = new Size(1010, 612);
+            panelScreens.Size = new Size(1010, 723);
             panelScreens.TabIndex = 1;
             // 
             // MainScreen
             // 
-            AutoScaleDimensions = new SizeF(8F, 17F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1010, 636);
+            ClientSize = new Size(1010, 748);
             Controls.Add(panelScreens);
             Controls.Add(menuStrip1);
-            Font = new Font("Arial Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "MainScreen";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SellSix";
             menuStrip1.ResumeLayout(false);
@@ -98,7 +93,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastroToolStripMenuItem;
-        private ToolStripMenuItem cadastroDeProdutoToolStripMenuItem;
         private ToolStripMenuItem cadastroDeUsuárioToolStripMenuItem;
         private Panel panelScreens;
     }

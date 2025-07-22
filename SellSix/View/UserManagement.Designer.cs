@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             tbUserName = new TextBox();
             lbUsername = new Label();
             lbDocument = new Label();
@@ -36,20 +35,18 @@
             lbEmail = new Label();
             tbEmail = new TextBox();
             lbAddress = new Label();
-            tb = new TextBox();
+            tbAddress = new TextBox();
             lbFone = new Label();
-            textBox1 = new TextBox();
-            bindingSourceUser = new BindingSource(components);
+            tbPhone = new TextBox();
             cbAccessLevel = new ComboBox();
             lbAccesLevel = new Label();
             lbCity = new Label();
             tbCity = new TextBox();
-            treeView1 = new TreeView();
+            tvUsers = new TreeView();
             panel1 = new Panel();
             btShowPass = new Button();
             lbPass = new Label();
             tbPass = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)bindingSourceUser).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,7 +58,7 @@
             tbUserName.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbUserName.Location = new Point(8, 49);
             tbUserName.Name = "tbUserName";
-            tbUserName.Size = new Size(323, 26);
+            tbUserName.Size = new Size(326, 26);
             tbUserName.TabIndex = 0;
             // 
             // lbUsername
@@ -94,9 +91,8 @@
             tbDocument.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbDocument.Location = new Point(8, 99);
             tbDocument.Name = "tbDocument";
-            tbDocument.Size = new Size(323, 26);
+            tbDocument.Size = new Size(326, 26);
             tbDocument.TabIndex = 2;
-            tbDocument.TextChanged += tbDocument_TextChanged;
             // 
             // lbEmail
             // 
@@ -117,7 +113,7 @@
             tbEmail.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbEmail.Location = new Point(8, 251);
             tbEmail.Name = "tbEmail";
-            tbEmail.Size = new Size(323, 26);
+            tbEmail.Size = new Size(326, 26);
             tbEmail.TabIndex = 6;
             // 
             // lbAddress
@@ -131,16 +127,16 @@
             lbAddress.TabIndex = 5;
             lbAddress.Text = "Endereço";
             // 
-            // tb
+            // tbAddress
             // 
-            tb.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tb.BackColor = SystemColors.ButtonHighlight;
-            tb.BorderStyle = BorderStyle.FixedSingle;
-            tb.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tb.Location = new Point(8, 150);
-            tb.Name = "tb";
-            tb.Size = new Size(323, 26);
-            tb.TabIndex = 4;
+            tbAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tbAddress.BackColor = SystemColors.ButtonHighlight;
+            tbAddress.BorderStyle = BorderStyle.FixedSingle;
+            tbAddress.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbAddress.Location = new Point(8, 150);
+            tbAddress.Name = "tbAddress";
+            tbAddress.Size = new Size(326, 26);
+            tbAddress.TabIndex = 4;
             // 
             // lbFone
             // 
@@ -153,20 +149,19 @@
             lbFone.TabIndex = 9;
             lbFone.Text = "Fone";
             // 
-            // textBox1
+            // tbPhone
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.BackColor = SystemColors.ButtonHighlight;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(8, 301);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(323, 26);
-            textBox1.TabIndex = 8;
+            tbPhone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tbPhone.BackColor = SystemColors.ButtonHighlight;
+            tbPhone.BorderStyle = BorderStyle.FixedSingle;
+            tbPhone.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbPhone.Location = new Point(8, 301);
+            tbPhone.Name = "tbPhone";
+            tbPhone.Size = new Size(326, 26);
+            tbPhone.TabIndex = 8;
             // 
             // cbAccessLevel
             // 
-            cbAccessLevel.DataSource = bindingSourceUser;
             cbAccessLevel.FormattingEnabled = true;
             cbAccessLevel.Location = new Point(8, 409);
             cbAccessLevel.Name = "cbAccessLevel";
@@ -203,24 +198,26 @@
             tbCity.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbCity.Location = new Point(8, 201);
             tbCity.Name = "tbCity";
-            tbCity.Size = new Size(323, 26);
+            tbCity.Size = new Size(326, 26);
             tbCity.TabIndex = 11;
             // 
-            // treeView1
+            // tvUsers
             // 
-            treeView1.Location = new Point(436, 26);
-            treeView1.Name = "treeView1";
-            treeView1.Size = new Size(326, 389);
-            treeView1.TabIndex = 13;
+            tvUsers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            tvUsers.Location = new Point(436, 26);
+            tvUsers.Name = "tvUsers";
+            tvUsers.ShowLines = false;
+            tvUsers.Size = new Size(326, 389);
+            tvUsers.TabIndex = 13;
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.BackColor = Color.PowderBlue;
+            panel1.AutoSize = true;
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(btShowPass);
             panel1.Controls.Add(lbPass);
             panel1.Controls.Add(tbPass);
-            panel1.Controls.Add(treeView1);
+            panel1.Controls.Add(tvUsers);
             panel1.Controls.Add(lbUsername);
             panel1.Controls.Add(tbUserName);
             panel1.Controls.Add(lbCity);
@@ -228,17 +225,18 @@
             panel1.Controls.Add(tbCity);
             panel1.Controls.Add(lbDocument);
             panel1.Controls.Add(cbAccessLevel);
-            panel1.Controls.Add(tb);
+            panel1.Controls.Add(tbAddress);
             panel1.Controls.Add(lbAccesLevel);
             panel1.Controls.Add(lbAddress);
             panel1.Controls.Add(lbFone);
             panel1.Controls.Add(tbEmail);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(tbPhone);
             panel1.Controls.Add(lbEmail);
+            panel1.Dock = DockStyle.Fill;
             panel1.ForeColor = SystemColors.ActiveCaptionText;
-            panel1.Location = new Point(4, 3);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(797, 447);
+            panel1.Size = new Size(800, 450);
             panel1.TabIndex = 14;
             // 
             // btShowPass
@@ -270,26 +268,21 @@
             tbPass.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbPass.Location = new Point(8, 353);
             tbPass.Name = "tbPass";
-            tbPass.Size = new Size(323, 26);
+            tbPass.Size = new Size(326, 26);
             tbPass.TabIndex = 14;
             // 
             // UserManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PowderBlue;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.White;
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "UserManagement";
-            ShowIcon = false;
-            ShowInTaskbar = false;
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "UserManagement";
-            ((System.ComponentModel.ISupportInitialize)bindingSourceUser).EndInit();
+            Size = new Size(800, 450);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -301,15 +294,14 @@
         private Label lbEmail;
         private TextBox tbEmail;
         private Label lbAddress;
-        private TextBox tb;
+        private TextBox tbAddress;
         private Label lbFone;
-        private TextBox textBox1;
-        private BindingSource bindingSourceUser;
+        private TextBox tbPhone;
         private ComboBox cbAccessLevel;
         private Label lbAccesLevel;
         private Label lbCity;
         private TextBox tbCity;
-        private TreeView treeView1;
+        private TreeView tvUsers;
         private Panel panel1;
         private Label lbPass;
         private TextBox tbPass;
