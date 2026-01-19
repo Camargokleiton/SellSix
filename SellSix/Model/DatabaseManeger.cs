@@ -8,6 +8,8 @@ namespace SellSix.Model
         private string _connectionString;
         private SQLiteConnection _connection;
 
+        
+
         private DatabaseManager(string connectionString)
         {
             _connectionString = connectionString;
